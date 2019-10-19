@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+    public int points=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +58,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void on_button_click(View view){
         TextView tv = this.findViewById(R.id.textView);
+        TextView tv2= this.findViewById(R.id.textView2);
+        TextView tv3=this.findViewById(R.id.textView3);
+        TextView innumber = this.findViewById(R.id.editText);
+        int innb= Integer.valueOf(innumber.getText().toString());
+
         Random r= new Random();
         int number = r.nextInt(6);
         tv.setText(Integer.toString(number));
+        if(innb == number) {
+            tv2.setText("Congratulations");
+            points=points+1;
+            tv3.setText("Points:"+Integer.toString(points));
+        }
+        else
+            tv2.setText("Try again");
+
+
+
     }
 }
