@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public int points=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void roll_the_dice(View view){
         TextView tv = this.findViewById(R.id.textView);
-        //TextView tv2= this.findViewById(R.id.textView2);
         TextView tv3=this.findViewById(R.id.textView3);
         TextView innumber = this.findViewById(R.id.editText);
         int innb= Integer.valueOf(innumber.getText().toString());
@@ -68,15 +68,29 @@ public class MainActivity extends AppCompatActivity {
         int number = r.nextInt(6);
         tv.setText(Integer.toString(number));
         if(innb == number) {
-            //tv2.setText("Congratulations");
+
             points=points+1;
             tv3.setText("Points:"+Integer.toString(points));
         }
-        //else
-           // tv2.setText("Try again");
 
     }
     public void icebreaker(View view){
+        TextView tv = this.findViewById(R.id.textView);
+
+        Random r= new Random();
+        int number = r.nextInt(6);
+        if(number==1)
+            tv.setText("If you could go anywhere in the world, where would you go?");
+        if(number==2)
+            tv.setText("If you were stranded on a desert island, what three things would you want to take with you?");
+        if(number==3)
+            tv.setText("If you could eat only one food for the rest of your life, what would that be?");
+        if(number==4)
+            tv.setText("If you won a million dollars, what is the first thing you would buy?");
+        if(number==5)
+            tv.setText("If you could spaned the day with one fictional character, who would it be?");
+        if(number==6)
+            tv.setText("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
 
     }
 }
