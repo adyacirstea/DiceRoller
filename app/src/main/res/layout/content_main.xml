@@ -62,7 +62,7 @@
         android:id="@+id/button2"
         android:layout_width="301dp"
         android:layout_height="100dp"
-        android:onClick="roll_the_dice"
+        android:onClick="icebreaker"
         android:text="Let's play D-ICEBREAKERS"
         android:textSize="30sp "
         app:layout_constraintBottom_toBottomOf="parent"
