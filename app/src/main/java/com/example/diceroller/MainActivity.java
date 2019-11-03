@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public int points=0;
@@ -56,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void on_button_click(View view){
+    public void roll_the_dice(View view){
         TextView tv = this.findViewById(R.id.textView);
-        TextView tv2= this.findViewById(R.id.textView2);
+        //TextView tv2= this.findViewById(R.id.textView2);
         TextView tv3=this.findViewById(R.id.textView3);
         TextView innumber = this.findViewById(R.id.editText);
         int innb= Integer.valueOf(innumber.getText().toString());
@@ -67,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
         int number = r.nextInt(6);
         tv.setText(Integer.toString(number));
         if(innb == number) {
-            tv2.setText("Congratulations");
+            //tv2.setText("Congratulations");
             points=points+1;
             tv3.setText("Points:"+Integer.toString(points));
         }
-        else
-            tv2.setText("Try again");
+        //else
+           // tv2.setText("Try again");
 
 
 
