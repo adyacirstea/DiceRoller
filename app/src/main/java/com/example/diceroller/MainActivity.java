@@ -15,9 +15,14 @@ import android.widget.TextView;
 
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public int points=0;
+   /* List<String> questions = new ArrayList<>();
+    questions.add("Q1");
+    questions.add("Q2");
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,22 +80,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void icebreaker(View view){
+
+        List<String> questions = new ArrayList<>();
+        questions.add("If you could go anywhere in the world, where would you go?");
+        questions.add("If you were stranded on a desert island, what three things would you want to take with you?");
+        questions.add("If you could eat only one food for the rest of your life, what would that be?");
+        questions.add("If you won a million dollars, what is the first thing you would buy?");
+        questions.add("If you could spaned the day with one fictional character, who would it be?");
+        questions.add("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
         TextView tv = this.findViewById(R.id.textView);
 
         Random r= new Random();
-        int number = r.nextInt(6);
-        if(number==1)
-            tv.setText("If you could go anywhere in the world, where would you go?");
-        if(number==2)
-            tv.setText("If you were stranded on a desert island, what three things would you want to take with you?");
-        if(number==3)
-            tv.setText("If you could eat only one food for the rest of your life, what would that be?");
-        if(number==4)
-            tv.setText("If you won a million dollars, what is the first thing you would buy?");
-        if(number==5)
-            tv.setText("If you could spaned the day with one fictional character, who would it be?");
-        if(number==6)
-            tv.setText("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
+        int number = r.nextInt(6 ) +1;
+        tv.setText(questions.get(number-1));
+
 
     }
 }
