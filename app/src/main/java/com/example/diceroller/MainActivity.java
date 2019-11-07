@@ -19,11 +19,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public int points=0;
-   /* List<String> questions = new ArrayList<>();
-    questions.add("Q1");
-    questions.add("Q2");
-    */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         int innb= Integer.valueOf(innumber.getText().toString());
 
         Random r= new Random();
-        int number = r.nextInt(6);
+        int number = r.nextInt(6) + 1;
         tv.setText(Integer.toString(number));
         if(innb == number) {
 
