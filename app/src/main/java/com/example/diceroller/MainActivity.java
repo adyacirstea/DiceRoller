@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public void icebreaker(View view){
 
         List<String> questions = new ArrayList<>();
+        questions.add("");
         questions.add("If you could go anywhere in the world, where would you go?");
         questions.add("If you were stranded on a desert island, what three things would you want to take with you?");
         questions.add("If you could eat only one food for the rest of your life, what would that be?");
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         Random r= new Random();
         int number = r.nextInt(6 ) +1;
-        tv.setText(questions.get(number-1));
+        tv.setText(questions.get(number));
 
 
     }
