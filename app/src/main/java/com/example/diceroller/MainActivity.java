@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         int innb= Integer.valueOf(innumber.getText().toString());
 
         Random r= new Random();
-        int number = r.nextInt(6) + 1;
-        tv.setText(Integer.toString(number));
-        if(innb == number) {
+        int num = r.nextInt(6) + 1;
+        tv.setText(Integer.toString(num));
+        if(innb == num) {
 
             points=points+1;
             tv3.setText("Points:"+Integer.toString(points));
@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = this.findViewById(R.id.textView);
 
         Random r= new Random();
-        int number = r.nextInt(6 ) +1;
-        tv.setText(questions.get(number-1));
+        int num = r.nextInt(6 ) +1;
+        tv.setText(questions.get(num-1));
 
 
     }
